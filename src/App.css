@@ -1,3 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+
+:root {
+  --red: #dd3038;
+  --orange: #e7613a;
+  --lightorange: #FDF4F2;
+  --black: #292929;/*standard text*/
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 .App {
   text-align: center;
 }
