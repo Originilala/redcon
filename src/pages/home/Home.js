@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Home({post}){
-    console.log(post);
+    // console.log(post);
     return(
         <div>
         <p>Home</p>

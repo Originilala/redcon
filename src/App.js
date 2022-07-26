@@ -1,7 +1,7 @@
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
+    Route, NavLink,
 } from "react-router-dom";
 import './App.css';
 import Home from './pages/home/Home.js';
@@ -19,7 +19,7 @@ function App() {
                 const result = await axios.get("https://www.reddit.com/hot.json?limit=15", {
                     cancelToken: source.token,
                 });
-                console.log(result.data.data.children[0].data.title);
+                // console.log(result.data.data.children[0].data.title);
                 setPosts(result.data.data.children);
             } catch (e) {
                 console.log(e);
@@ -33,11 +33,11 @@ function App() {
         }
     }, []);
 
-    console.log(posts);
+    // console.log(posts);
     return (
-        <Router>
+        <div>
             <Switch>
-                <Route path="/" exact>
+                <Route exact path="/">
                     <Home
                         post={posts}
                     />
@@ -46,7 +46,7 @@ function App() {
                     <Subreddit/>
                 </Route>
             </Switch>
-        </Router>
+        </div>
     );
 }
 
