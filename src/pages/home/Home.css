@@ -1,0 +1,22 @@
+section {
+    background-color: var(--lightorange);
+}
+
+.main-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 50px;
+
+}
+
+.main-main-title,
+.main-sub-title {
+    text-align: center;
+    padding: 10px 50px;
+}
+
+.main-sub-title {
+    font-size: 12px;
+}

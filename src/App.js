@@ -1,3 +1,4 @@
+import logo from './assets/logo.png';
 import {
     BrowserRouter as Router,
     Switch,
@@ -28,7 +29,7 @@ function App() {
         if (!posts.length) {
             getHotPosts();
         }
-        return function cleanup(){
+        return function cleanup() {
             source.cancel();
         }
     }, []);

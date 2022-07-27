@@ -1,24 +1,31 @@
 import React from "react";
+import logo from '../../assets/logo.png';
+import Header from "../../components/header/Header";
+import Button from "../../components/button/Button";
+import './Home.css';
 
-function Home({post}){
+function Home({post}) {
     // console.log(post);
-    return(
+    return (
         <div>
-        <p>Home</p>
-            <ul>
+            <Header
+                pageTitle="Reddit"
+            />
+            <section>
+                <h2 className="main-main-title"><span className="capitalize">hottest</span> posts</h2>
+                <h3 className="main-sub-title">on <span className="capitalize">reddit</span> right now</h3>
+                <div className="main-list">
                 {post.map((subject) => {
-                    return(
-                        <li key={subject.data.title}>
-                            <a href={subject.data.url}>{subject.data.title}</a>
-                            <a href={`https://reddit.com/${subject.data.subreddit_name_prefixed}`}>{subject.data.subreddit_name_prefixed}</a>
-                            <p>Comments {subject.data.num_comments}</p>
-                            <p>Ups {subject.data.ups}</p>
-                        </li>
-                    );
+                        return (
+                            <Button
+                                post={subject}
+                            />
+                        );
+                    }
+                )
                 }
-                    )
-                }
-            </ul>
+                </div>
+            </section>
         </div>
     )
 };
